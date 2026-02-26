@@ -12,20 +12,60 @@
         <a href="index.html">Home</a>
         <a href="solution.html">Methodology</a>
         <a href="architecture.html">Architecture</a>
-        <a href="impact.html">Applications</a>
+        <a href="impact.html">Impact</a>
         <a href="team.html">Team</a>
     </div>
 </nav>
 
 <section>
-    <h2>Design Methodology</h2>
+    <h2>Research Methodology</h2>
+
     <p>
-        The proposed PSBN model is based on a layered network architecture integrating LTE/5G
-        infrastructure with priority-based routing mechanisms. The methodology focuses on
-        separating mission-critical traffic from civilian traffic using dedicated spectrum
-        allocation and Quality of Service (QoS) enforcement policies.
+        This project develops a research-based Public Safety Broadband Network (PSBN) 
+        prototype to evaluate resilient mission-critical communications using 
+        multi-band cellular infrastructure and Multipath TCP (MPTCP).
     </p>
 
+    <h3>Experimental Approach</h3>
+    <p>
+        Two independent cellular frequency bands are deployed to simulate 
+        a redundant PSBN environment:
+    </p>
+
+    <ul>
+        <li><strong>Band 14 (LTE):</strong> Public safety spectrum.</li>
+        <li><strong>Band n77 (5G NR):</strong> Mid-band high-capacity spectrum.</li>
+    </ul>
+
+    <h3>MPTCP Integration</h3>
+    <p>
+        Multipath TCP (MPTCP) is implemented at the transport layer to allow 
+        simultaneous data transmission over both networks. If one band fails 
+        or degrades, traffic is automatically rerouted without interrupting 
+        the active session.
+    </p>
+
+    <h3>Testing & Evaluation</h3>
+    <ul>
+        <li>Simulated band failure</li>
+        <li>Congestion injection</li>
+        <li>Latency and packet loss testing</li>
+        <li>High-density traffic simulation</li>
+    </ul>
+
+    <p>
+        Performance metrics include failover time, packet loss, throughput stability, 
+        latency variation, and session continuity success rate.
+    </p>
+
+</section>
+
+<footer>
+    © 2026 PSBN Research Implementation | Carleton University
+</footer>
+
+</body>
+</html>
     <h3>Key Design Principles</h3>
     <ul>
         <li>Dedicated broadband spectrum allocation</li>
