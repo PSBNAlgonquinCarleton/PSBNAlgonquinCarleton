@@ -12,39 +12,66 @@
         <a href="index.html">Home</a>
         <a href="solution.html">Methodology</a>
         <a href="architecture.html">Architecture</a>
-        <a href="impact.html">Applications</a>
+        <a href="impact.html">Impact</a>
         <a href="team.html">Team</a>
     </div>
 </nav>
 
 <section>
     <h2>System Architecture</h2>
+
     <p>
-        The PSBN architecture is composed of three primary layers:
-        Access Network, Core Network, and Application Layer.
+        The proposed PSBN prototype consists of a dual-band radio access 
+        architecture combined with an MPTCP-enabled transport layer.
     </p>
 
-    <h3>Access Network</h3>
+    <h3>Dual-Band Radio Access</h3>
     <p>
-        LTE/5G base stations provide connectivity to first responder devices,
-        UAV systems, and IoT sensors.
+        Two independent cellular networks operate simultaneously:
     </p>
 
-    <h3>Core Network</h3>
+    <ul>
+        <li>LTE Band 14 (Public Safety Spectrum)</li>
+        <li>5G NR Band n77 (Mid-band)</li>
+    </ul>
+
     <p>
-        The core network manages routing, authentication, and policy enforcement,
-        ensuring priority-based traffic handling.
+        Each band connects to a core network capable of handling mission-critical 
+        traffic and secure routing.
     </p>
 
-    <h3>Deployable Infrastructure</h3>
+    <h3>User Equipment</h3>
+    <ul>
+        <li>Dual-SIM smartphones</li>
+        <li>UAVs transmitting real-time video</li>
+        <li>Mobile data terminals</li>
+        <li>GPS tracking devices</li>
+    </ul>
+
+    <h3>Traffic Flow</h3>
     <p>
-        Mobile cell towers and portable communication units extend coverage
-        in disaster-affected areas.
+        End devices establish concurrent subflows over both bands using MPTCP. 
+        Data is distributed across both paths to provide load balancing and 
+        seamless failover. If one path becomes unavailable, traffic continues 
+        over the remaining active link without session termination.
     </p>
+
+    <h3>Resiliency Model</h3>
+    <p>
+        Redundancy is achieved through:
+    </p>
+
+    <ul>
+        <li>Frequency diversity</li>
+        <li>Transport-layer multipathing</li>
+        <li>Independent radio links</li>
+        <li>Path monitoring and dynamic rerouting</li>
+    </ul>
+
 </section>
 
 <footer>
-    © 2026 PSBN Architecture Overview
+    © 2026 PSBN Research Implementation | Carleton University
 </footer>
 
 </body>
