@@ -1,42 +1,168 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 <head>
-    <title>PSBN | Team</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Team | PSBN</title>
 
-<nav>
-    <div class="logo">PSBN Research Project</div>
-    <div>
+  <meta name="description" content="Meet the capstone students and advisors behind the PSBN dual-band continuity prototype." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header class="nav">
+    <div class="wrap nav-inner">
+      <a class="brand" href="index.html" aria-label="Home">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span class="brand-text">
+          <span class="brand-title">PSBN</span>
+          <span class="brand-sub">Capstone Project</span>
+        </span>
+      </a>
+
+      <nav class="nav-links" aria-label="Primary">
         <a href="index.html">Home</a>
         <a href="solution.html">Methodology</a>
         <a href="architecture.html">Architecture</a>
         <a href="impact.html">Impact</a>
-        <a href="team.html">Team</a>
+        <a class="active" href="team.html">Team</a>
+      </nav>
+
+      <a class="nav-cta" href="solution.html">View Project →</a>
+
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+        <span></span><span></span><span></span>
+      </button>
     </div>
-</nav>
 
-<section>
-    <h2>Research Team</h2>
+    <div id="mobileMenu" class="mobile-menu" aria-hidden="true">
+      <div class="wrap mobile-inner">
+        <a class="mobile-link" href="index.html">Home</a>
+        <a class="mobile-link" href="solution.html">Methodology</a>
+        <a class="mobile-link" href="architecture.html">Architecture</a>
+        <a class="mobile-link" href="impact.html">Impact</a>
+        <a class="mobile-link active" href="team.html">Team</a>
+      </div>
+    </div>
+  </header>
 
-    <p>
-        This project is developed as part of an academic research initiative 
-        focused on resilient broadband infrastructure for public safety.
-    </p>
+  <main>
+    <section class="page-hero">
+      <div class="wrap page-hero-grid">
+        <div>
+          <p class="kicker">Team</p>
+          <h1 class="headline">Students & advisors</h1>
+          <p class="subhead">
+            Three capstone students supported by two advisors from academia and industry.
+          </p>
 
-    <h3>Team Members</h3>
-    <ul>
-        <li>Your Name – Network Architecture & Implementation</li>
-        <li>Team Member 2 – RF Configuration & Testing</li>
-        <li>Team Member 3 – Performance Evaluation & Metrics</li>
-    </ul>
+          <div class="chips">
+            <span class="chip">3 students</span>
+            <span class="chip">2 advisors</span>
+            <span class="chip">Carleton / Algonquin</span>
+          </div>
+        </div>
+      </div>
+    </section>
 
-</section>
+    <section class="section">
+      <div class="wrap">
+        <header class="section-head">
+          <h2>Capstone students</h2>
+          <p>Headshots and personal links can be added later.</p>
+        </header>
 
-<footer>
-    © 2026 PSBN Research Implementation
-</footer>
+        <div class="people-grid">
+          <!-- Student 1 -->
+          <article class="person-card">
+            <div class="person-top">
+              <div class="person-photo" aria-hidden="true">Photo</div>
+              <div class="person-name">Maxx Kennedy</div>
+              <div class="person-role">Capstone Student</div>
+            <div class="person-links">
+              <a class="tlink" href="#">LinkedIn</a>
+            </div>
+          </article>
 
+          <!-- Student 2 -->
+          <article class="person-card">
+            <div class="person-top">
+              <div class="person-photo" aria-hidden="true">Photo</div>
+              <div class="person-name">Xander Xu</div>
+              <div class="person-role">Capstone Student</div>
+            <div class="person-links">
+              <a class="tlink" href="#">LinkedIn</a>
+            </div>
+          </article>
+
+          <!-- Student 3 -->
+          <article class="person-card">
+            <div class="person-top">
+              <div class="person-photo" aria-hidden="true">Photo</div>
+              <div class="person-name">Samarth Doraiswami</div>
+              <div class="person-role">Capstone Student</div>
+            <div class="person-links">
+              <a class="tlink" href="#">LinkedIn</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section soft">
+      <div class="wrap">
+        <header class="section-head">
+          <h2>Advisors</h2>
+          <p>Academic and industry guidance.</p>
+        </header>
+
+        <div class="people-grid advisors-grid">
+            <article class="person-card">
+            <div class="person-top">
+            <div class="person-photo">
+                <img src="assets/wahab.jpg" alt="Wahab Almuhtadi" class="person-img" />
+            </div>
+            <div class="person-name">Wahab Almuhtadi</div>
+            <div class="person-role">Advisor • Algonquin College</div>
+            </div>
+        </article>
+
+          <article class="person-card">
+            <div class="person-top">
+              <div class="person-photo" aria-hidden="true">Photo</div>
+              <div class="person-name">Jordan Melzer</div>
+              <div class="person-role">Advisor • TELUS</div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="wrap cta-inner">
+        <div>
+          <h2>Back to the homepage.</h2>
+          <p>Quick overview for judges, sponsors, and reviewers.</p>
+        </div>
+        <div class="cta-actions">
+          <a class="btn primary" href="index.html">Home</a>
+          <a class="btn" href="impact.html">Impact</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <div>
+        <div class="footer-title">PSBN</div>
+        <div class="footer-sub">© 2026 • Carleton University / Algonquin College</div>
+      </div>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="solution.html">Methodology</a>
+        <a href="architecture.html">Architecture</a>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
