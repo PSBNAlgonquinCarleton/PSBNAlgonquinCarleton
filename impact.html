@@ -1,46 +1,212 @@
-<!DOCTYPE html>
-<html>
+<!-- impact.html -->
+<!doctype html>
+<html lang="en">
 <head>
-    <title>PSBN | Impact</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Impact | PSBN Prototype</title>
 
-<nav>
-    <div class="logo">PSBN Research Project</div>
-    <div>
+  <meta name="description" content="Impact and evaluation plan for the PSBN prototype: continuity metrics, evidence reporting, and stakeholder-ready summaries." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header class="nav">
+    <div class="wrap nav-inner">
+      <a class="brand" href="index.html" aria-label="Home">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span class="brand-text">
+          <span class="brand-title">PSBN Prototype</span>
+          <span class="brand-sub">Capstone Project</span>
+        </span>
+      </a>
+
+      <nav class="nav-links" aria-label="Primary">
         <a href="index.html">Home</a>
         <a href="solution.html">Methodology</a>
         <a href="architecture.html">Architecture</a>
-        <a href="impact.html">Impact</a>
+        <a class="active" href="impact.html">Impact</a>
         <a href="team.html">Team</a>
+      </nav>
+
+      <a class="nav-cta" href="#metrics">
+        Metrics <span aria-hidden="true">→</span>
+      </a>
+
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+        <span></span><span></span><span></span>
+      </button>
     </div>
-</nav>
 
-<section>
-    <h2>Impact & Alignment with PSBN Principles</h2>
+    <div id="mobileMenu" class="mobile-menu" aria-hidden="true">
+      <div class="wrap mobile-inner">
+        <a class="mobile-link" href="index.html">Home</a>
+        <a class="mobile-link" href="solution.html">Methodology</a>
+        <a class="mobile-link" href="architecture.html">Architecture</a>
+        <a class="mobile-link active" href="impact.html">Impact</a>
+        <a class="mobile-link" href="team.html">Team</a>
+      </div>
+    </div>
+  </header>
 
-    <p>
-        This prototype evaluates how a resilient PSBN architecture can meet 
-        Canada’s ten foundational principles including interoperability, 
-        equitable service, affordability, sustainability, coverage, 
-        mission-critical delivery, uninterrupted access, security, 
-        resiliency, and efficient spectrum use.
-    </p>
+  <main>
+    <section class="page-hero">
+      <div class="wrap page-hero-grid">
+        <div>
+          <p class="kicker">Impact</p>
+          <h1 class="headline">What we aim to show</h1>
+          <p class="subhead">
+            The PSBN prototype is designed to evaluate continuity behavior and report outcomes using clear metrics
+            and real evidence (videos + plots/tables) as testing is completed.
+          </p>
 
-    <h3>Key Impact Areas</h3>
-    <ul>
-        <li>Continuous connectivity during disasters</li>
-        <li>Secure real-time drone video transmission</li>
-        <li>Priority access during network congestion</li>
-        <li>Improved rural and remote communication reliability</li>
-    </ul>
+          <div class="chips">
+            <span class="chip">Continuity</span>
+            <span class="chip">Recovery behavior</span>
+            <span class="chip">Stability</span>
+          </div>
+        </div>
 
-</section>
+        <div class="media-card">
+          <div class="media-top">
+            <span class="pill">Placeholder</span>
+            <span class="media-note">Results plots / tables</span>
+          </div>
+          <div class="media-body">
+            <div class="trailer-box" style="aspect-ratio:auto;">
+              <div>
+                <div class="big">Results visual placeholder</div>
+                <div class="muted">Insert plots or tables once measurements exist.</div>
+                <div class="muted"><code>assets/results-plot.png</code></div>
+              </div>
+            </div>
+          </div>
+          <div class="media-foot">
+            <span class="small">All visuals will be published after testing is completed.</span>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<footer>
-    © 2026 PSBN Research Implementation
-</footer>
+    <section id="metrics" class="section">
+      <div class="wrap">
+        <header class="section-head reveal">
+          <h2>Planned evaluation metrics</h2>
+          <p>
+            Metrics are selected to match the project goal: determine whether sessions remain usable through disruption,
+            and quantify recovery behavior once testing begins.
+          </p>
+        </header>
 
+        <div class="cards">
+          <article class="card reveal">
+            <h3>Session continuity</h3>
+            <p>Whether a TCP session remains usable across link loss and path transition events.</p>
+          </article>
+
+          <article class="card reveal">
+            <h3>Recovery time</h3>
+            <p>The time required to return to stable communication after a disruption event.</p>
+          </article>
+
+          <article class="card reveal">
+            <h3>Stability under change</h3>
+            <p>Throughput/latency behavior during transitions and under degraded path conditions.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section soft">
+      <div class="wrap split">
+        <div class="reveal">
+          <header class="section-head">
+            <h2>How results will be presented</h2>
+            <p>Designed for review: clear, visual, and evidence-based.</p>
+          </header>
+
+          <ul class="list">
+            <li><span class="check" aria-hidden="true">✓</span> Short video clip per scenario</li>
+            <li><span class="check" aria-hidden="true">✓</span> One plot/table summarizing outcomes</li>
+            <li><span class="check" aria-hidden="true">✓</span> A brief written explanation tied to the architecture</li>
+          </ul>
+
+          <div class="actions">
+            <a class="link" href="solution.html">Methodology →</a>
+          </div>
+        </div>
+
+        <div class="aside reveal">
+          <div class="aside-card">
+            <div class="aside-top">
+              <span class="pill">Placeholder</span>
+              <span class="small">Scenario video slot</span>
+            </div>
+            <div class="aside-body">
+              <div class="trailer-box">
+                <div>
+                  <div class="big">Scenario video placeholder</div>
+                  <div class="muted"><code>assets/scenario-a.mp4</code> or embed link</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="wrap cta-inner">
+        <div>
+          <h2>Next: meet the team.</h2>
+          <p>Project members and advisors.</p>
+        </div>
+        <div class="cta-actions">
+          <a class="btn primary" href="team.html">Team</a>
+          <a class="btn" href="architecture.html">Architecture</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <div>
+        <div class="footer-title">PSBN Prototype</div>
+        <div class="footer-sub">© 2026 • Carleton University / Algonquin College</div>
+      </div>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="solution.html">Methodology</a>
+        <a href="team.html">Team</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      const btn = document.querySelector(".nav-toggle");
+      const menu = document.getElementById("mobileMenu");
+
+      if (btn && menu) {
+        btn.addEventListener("click", () => {
+          const expanded = btn.getAttribute("aria-expanded") === "true";
+          btn.setAttribute("aria-expanded", String(!expanded));
+          menu.classList.toggle("open");
+          menu.setAttribute("aria-hidden", expanded ? "true" : "false");
+        });
+      }
+
+      const revealEls = document.querySelectorAll(".reveal");
+      if (revealEls.length) {
+        const io = new IntersectionObserver((entries) => {
+          entries.forEach(e => {
+            if (e.isIntersecting) e.target.classList.add("show");
+          });
+        }, { threshold: 0.12 });
+        revealEls.forEach(el => io.observe(el));
+      }
+    })();
+  </script>
 </body>
 </html>
