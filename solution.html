@@ -1,84 +1,283 @@
-<!DOCTYPE html>
-<html>
+<!-- solution.html -->
+<!doctype html>
+<html lang="en">
 <head>
-    <title>PSBN | Methodology</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Methodology | PSBN Prototype</title>
 
-<nav>
-    <div><strong>PSBN Research Project</strong></div>
-    <div>
+  <meta name="description" content="Methodology for the PSBN capstone: how the dual-band platform is configured, how MPTCP is enabled, and how continuity will be evaluated under outage and handover scenarios." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header class="nav">
+    <div class="wrap nav-inner">
+      <a class="brand" href="index.html" aria-label="Home">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span class="brand-text">
+          <span class="brand-title">PSBN Prototype</span>
+          <span class="brand-sub">Capstone Project</span>
+        </span>
+      </a>
+
+      <nav class="nav-links" aria-label="Primary">
         <a href="index.html">Home</a>
-        <a href="solution.html">Methodology</a>
+        <a class="active" href="solution.html">Methodology</a>
         <a href="architecture.html">Architecture</a>
         <a href="impact.html">Impact</a>
         <a href="team.html">Team</a>
+      </nav>
+
+      <a class="nav-cta" href="#workflow">
+        Workflow <span aria-hidden="true">→</span>
+      </a>
+
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+        <span></span><span></span><span></span>
+      </button>
     </div>
-</nav>
 
-<section>
-    <h2>Research Methodology</h2>
+    <div id="mobileMenu" class="mobile-menu" aria-hidden="true">
+      <div class="wrap mobile-inner">
+        <a class="mobile-link" href="index.html">Home</a>
+        <a class="mobile-link active" href="solution.html">Methodology</a>
+        <a class="mobile-link" href="architecture.html">Architecture</a>
+        <a class="mobile-link" href="impact.html">Impact</a>
+        <a class="mobile-link" href="team.html">Team</a>
+      </div>
+    </div>
+  </header>
 
-    <p>
-        This project develops a research-based Public Safety Broadband Network (PSBN) 
-        prototype to evaluate resilient mission-critical communications using 
-        multi-band cellular infrastructure and Multipath TCP (MPTCP).
-    </p>
+  <main>
+    <section class="page-hero">
+      <div class="wrap page-hero-grid">
+        <div>
+          <p class="kicker">Methodology</p>
+          <h1 class="headline">How the platform is built and evaluated</h1>
+          <p class="subhead">
+            This page outlines the workflow for configuring dual-band connectivity, enabling Multipath TCP (MPTCP),
+            and preparing controlled scenarios to evaluate session continuity under disruption.
+          </p>
 
-    <h3>Experimental Approach</h3>
-    <p>
-        Two independent cellular frequency bands are deployed to simulate 
-        a redundant PSBN environment:
-    </p>
+          <div class="chips">
+            <span class="chip">Band 14 LTE</span>
+            <span class="chip">n77 5G</span>
+            <span class="chip">MPTCP</span>
+          </div>
+        </div>
 
-    <ul>
-        <li><strong>Band 14 (LTE):</strong> Public safety spectrum.</li>
-        <li><strong>Band n77 (5G NR):</strong> Mid-band high-capacity spectrum.</li>
-    </ul>
+        <div class="media-card">
+          <div class="media-top">
+            <span class="pill">Image</span>
+            <span class="media-note">Setup reference</span>
+          </div>
 
-    <h3>MPTCP Integration</h3>
-    <p>
-        Multipath TCP (MPTCP) is implemented at the transport layer to allow 
-        simultaneous data transmission over both networks. If one band fails 
-        or degrades, traffic is automatically rerouted without interrupting 
-        the active session.
-    </p>
+          <div class="media-body">
+            <div class="media-figure">
+              <button type="button" class="js-zoom" aria-label="Expand image">
+                <img class="media-img diagram" src="assets/setupdiagram.jpg" alt="PSBN methodology / setup diagram" loading="lazy" />
+              </button>
+            </div>
 
-    <h3>Testing & Evaluation</h3>
-    <ul>
-        <li>Simulated band failure</li>
-        <li>Congestion injection</li>
-        <li>Latency and packet loss testing</li>
-        <li>High-density traffic simulation</li>
-    </ul>
+            <div class="media-title">Workflow visual</div>
+            <p class="media-text">
+              This diagram supports the documentation of how the platform is configured and how evaluation scenarios are prepared.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <p>
-        Performance metrics include failover time, packet loss, throughput stability, 
-        latency variation, and session continuity success rate.
-    </p>
+    <section id="workflow" class="section">
+      <div class="wrap">
+        <header class="section-head reveal">
+          <h2>Workflow overview</h2>
+          <p>
+            The methodology is structured as a repeatable pipeline: configure interfaces, enable continuity, then prepare
+            controlled disruption scenarios for evaluation once the platform is complete.
+          </p>
+        </header>
 
-</section>
+        <div class="method-steps">
+          <div class="mstep reveal">
+            <div class="mnum">1</div>
+            <div class="mbody">
+              <div class="mtitle">Configure dual-band connectivity</div>
+              <div class="mtext">
+                Bring up LTE and 5G interfaces, confirm independent connectivity, and document baseline network behavior
+                (addressing, routing, and stability).
+              </div>
+              <div class="mtags">
+                <span>LTE</span><span>5G</span><span>Routing</span>
+              </div>
+            </div>
+          </div>
 
-<footer>
-    © 2026 PSBN Research Implementation | Carleton University
-</footer>
+          <div class="mstep reveal">
+            <div class="mnum">2</div>
+            <div class="mbody">
+              <div class="mtitle">Enable MPTCP</div>
+              <div class="mtext">
+                Enable MPTCP support on the Linux-based gateway environment and confirm subflow establishment across both links.
+              </div>
+              <div class="mtags">
+                <span>MPTCP</span><span>Subflows</span><span>Continuity</span>
+              </div>
+            </div>
+          </div>
 
-</body>
-</html>
-    <h3>Key Design Principles</h3>
-    <ul>
-        <li>Dedicated broadband spectrum allocation</li>
-        <li>Priority and preemption mechanisms</li>
-        <li>End-to-end encryption protocols</li>
-        <li>Redundant backhaul connectivity</li>
-        <li>Edge computing integration</li>
-    </ul>
-</section>
+          <div class="mstep reveal">
+            <div class="mnum">3</div>
+            <div class="mbody">
+              <div class="mtitle">Prepare disruption scenarios</div>
+              <div class="mtext">
+                Define controlled events such as link loss, path degradation, and handover transitions to evaluate how sessions behave.
+              </div>
+              <div class="mtags">
+                <span>Outage</span><span>Handover</span><span>Degradation</span>
+              </div>
+            </div>
+          </div>
 
-<footer>
-    © 2026 PSBN Academic Proposal
-</footer>
+          <div class="mstep reveal">
+            <div class="mnum">4</div>
+            <div class="mbody">
+              <div class="mtitle">Collect evidence and publish</div>
+              <div class="mtext">
+                Once testing begins, evidence will be published as short videos and clear visual summaries (plots/tables) on the site.
+              </div>
+              <div class="mtags">
+                <span>Videos</span><span>Plots</span><span>Reporting</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
+    <section class="section soft">
+      <div class="wrap">
+        <header class="section-head reveal">
+          <h2>Planned scenarios</h2>
+          <p>
+            Scenarios are designed to demonstrate continuity behavior clearly. Final scenario details will be published as testing is completed.
+          </p>
+        </header>
+
+        <div class="cards">
+          <article class="card reveal">
+            <h3>Link loss during active session</h3>
+            <p>Disable LTE or 5G while a TCP-based workflow is active and observe session behavior.</p>
+          </article>
+
+          <article class="card reveal">
+            <h3>Handover transition</h3>
+            <p>Trigger a path change and observe session stability, recovery behavior, and interruptions.</p>
+          </article>
+
+          <article class="card reveal">
+            <h3>Path degradation</h3>
+            <p>Reduce bandwidth / increase latency on one path and observe traffic shift and continuity impact.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="wrap cta-inner">
+        <div>
+          <h2>Next: explore the architecture.</h2>
+          <p>See how the components and traffic flows fit together.</p>
+        </div>
+        <div class="cta-actions">
+          <a class="btn primary" href="architecture.html">Architecture</a>
+          <a class="btn" href="impact.html">Impact</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <div>
+        <div class="footer-title">PSBN Prototype</div>
+        <div class="footer-sub">© 2026 • Carleton University / Algonquin College</div>
+      </div>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="architecture.html">Architecture</a>
+        <a href="team.html">Team</a>
+      </div>
+    </div>
+  </footer>
+
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="lightbox-close" type="button" aria-label="Close">×</button>
+    <div class="lightbox-inner">
+      <img id="lightboxImg" alt="" />
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      const btn = document.querySelector(".nav-toggle");
+      const menu = document.getElementById("mobileMenu");
+
+      if (btn && menu) {
+        btn.addEventListener("click", () => {
+          const expanded = btn.getAttribute("aria-expanded") === "true";
+          btn.setAttribute("aria-expanded", String(!expanded));
+          menu.classList.toggle("open");
+          menu.setAttribute("aria-hidden", expanded ? "true" : "false");
+        });
+      }
+
+      const revealEls = document.querySelectorAll(".reveal");
+      if (revealEls.length) {
+        const io = new IntersectionObserver((entries) => {
+          entries.forEach(e => {
+            if (e.isIntersecting) e.target.classList.add("show");
+          });
+        }, { threshold: 0.12 });
+        revealEls.forEach(el => io.observe(el));
+      }
+
+      const lightbox = document.getElementById("lightbox");
+      const lightboxImg = document.getElementById("lightboxImg");
+      const closeBtn = lightbox ? lightbox.querySelector(".lightbox-close") : null;
+
+      function openLightbox(src, alt) {
+        if (!lightbox || !lightboxImg) return;
+        lightboxImg.src = src;
+        lightboxImg.alt = alt || "";
+        lightbox.classList.add("open");
+        lightbox.setAttribute("aria-hidden", "false");
+        document.body.classList.add("no-scroll");
+      }
+
+      function closeLightbox() {
+        if (!lightbox) return;
+        lightbox.classList.remove("open");
+        lightbox.setAttribute("aria-hidden", "true");
+        document.body.classList.remove("no-scroll");
+        if (lightboxImg) lightboxImg.src = "";
+      }
+
+      document.querySelectorAll(".js-zoom img").forEach(img => {
+        img.addEventListener("click", () => openLightbox(img.src, img.alt));
+      });
+
+      if (closeBtn) closeBtn.addEventListener("click", closeLightbox);
+      if (lightbox) {
+        lightbox.addEventListener("click", (e) => {
+          if (e.target === lightbox) closeLightbox();
+        });
+      }
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") closeLightbox();
+      });
+    })();
+  </script>
 </body>
 </html>
