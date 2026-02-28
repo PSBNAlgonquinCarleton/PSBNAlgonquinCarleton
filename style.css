@@ -595,3 +595,7 @@ code{
   object-fit: cover;
   display: block;
 }
+
+.person-card { position: relative; }
+.person-links { position: relative; z-index: 5; }
+.person-links .tlink { position: relative; z-index: 6; pointer-events: auto; }
