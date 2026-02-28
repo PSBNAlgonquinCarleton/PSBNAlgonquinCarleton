@@ -1,78 +1,257 @@
-<!DOCTYPE html>
-<html>
+<!-- architecture.html -->
+<!doctype html>
+<html lang="en">
 <head>
-    <title>PSBN | Architecture</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Architecture | PSBN Prototype</title>
 
-<nav>
-    <div><strong>PSBN Research Project</strong></div>
-    <div>
+  <meta name="description" content="Architecture overview of the PSBN prototype: dual-band LTE/5G connectivity with a Linux-based MPTCP continuity layer." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header class="nav">
+    <div class="wrap nav-inner">
+      <a class="brand" href="index.html" aria-label="Home">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span class="brand-text">
+          <span class="brand-title">PSBN Prototype</span>
+          <span class="brand-sub">Capstone Project</span>
+        </span>
+      </a>
+
+      <nav class="nav-links" aria-label="Primary">
         <a href="index.html">Home</a>
         <a href="solution.html">Methodology</a>
-        <a href="architecture.html">Architecture</a>
+        <a class="active" href="architecture.html">Architecture</a>
         <a href="impact.html">Impact</a>
         <a href="team.html">Team</a>
+      </nav>
+
+      <a class="nav-cta" href="#diagram">
+        Diagram <span aria-hidden="true">→</span>
+      </a>
+
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+        <span></span><span></span><span></span>
+      </button>
     </div>
-</nav>
 
-<section>
-    <h2>System Architecture</h2>
+    <div id="mobileMenu" class="mobile-menu" aria-hidden="true">
+      <div class="wrap mobile-inner">
+        <a class="mobile-link" href="index.html">Home</a>
+        <a class="mobile-link" href="solution.html">Methodology</a>
+        <a class="mobile-link active" href="architecture.html">Architecture</a>
+        <a class="mobile-link" href="impact.html">Impact</a>
+        <a class="mobile-link" href="team.html">Team</a>
+      </div>
+    </div>
+  </header>
 
-    <p>
-        The proposed PSBN prototype consists of a dual-band radio access 
-        architecture combined with an MPTCP-enabled transport layer.
-    </p>
+  <main>
+    <section class="page-hero">
+      <div class="wrap page-hero-grid">
+        <div>
+          <p class="kicker">Architecture</p>
+          <h1 class="headline">How the system fits together</h1>
+          <p class="subhead">
+            The PSBN prototype integrates LTE and 5G connectivity and prepares a Linux-based MPTCP continuity layer for
+            controlled evaluation of session behavior under disruption.
+          </p>
 
-    <h3>Dual-Band Radio Access</h3>
-    <p>
-        Two independent cellular networks operate simultaneously:
-    </p>
+          <div class="chips">
+            <span class="chip">Dual-band links</span>
+            <span class="chip">Linux-based gateway</span>
+            <span class="chip">MPTCP continuity</span>
+          </div>
+        </div>
 
-    <ul>
-        <li>LTE Band 14 (Public Safety Spectrum)</li>
-        <li>5G NR Band n77 (Mid-band)</li>
-    </ul>
+        <div class="media-card" id="diagram">
+          <div class="media-top">
+            <span class="pill">Image</span>
+            <span class="media-note">Architecture reference</span>
+          </div>
+          <div class="media-body">
+            <div class="media-figure">
+              <button type="button" class="js-zoom" aria-label="Expand image">
+                <img class="media-img diagram" src="assets/systemdiagram.png" alt="PSBN architecture diagram" loading="lazy" />
+              </button>
+            </div>
 
-    <p>
-        Each band connects to a core network capable of handling mission-critical 
-        traffic and secure routing.
-    </p>
+            <div class="media-title">Architecture diagram</div>
+            <p class="media-text">
+              A system-level view of how dual-band connectivity and continuity components connect in the prototype.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <h3>User Equipment</h3>
-    <ul>
-        <li>Dual-SIM smartphones</li>
-        <li>UAVs transmitting real-time video</li>
-        <li>Mobile data terminals</li>
-        <li>GPS tracking devices</li>
-    </ul>
+    <section class="section">
+      <div class="wrap">
+        <header class="section-head reveal">
+          <h2>Core components</h2>
+          <p>
+            The platform is assembled from connectivity, gateway, and endpoint components. Specific hardware details can be
+            added as your final build is locked in.
+          </p>
+        </header>
 
-    <h3>Traffic Flow</h3>
-    <p>
-        End devices establish concurrent subflows over both bands using MPTCP. 
-        Data is distributed across both paths to provide load balancing and 
-        seamless failover. If one path becomes unavailable, traffic continues 
-        over the remaining active link without session termination.
-    </p>
+        <div class="cards">
+          <article class="card reveal">
+            <h3>Dual-band connectivity</h3>
+            <p>LTE (Band 14) and 5G (n77) provide independent network paths intended for redundancy and continuity evaluation.</p>
+          </article>
 
-    <h3>Resiliency Model</h3>
-    <p>
-        Redundancy is achieved through:
-    </p>
+          <article class="card reveal">
+            <h3>Linux-based gateway</h3>
+            <p>A Linux environment configured to support MPTCP and manage routing/policy behavior across interfaces.</p>
+          </article>
 
-    <ul>
-        <li>Frequency diversity</li>
-        <li>Transport-layer multipathing</li>
-        <li>Independent radio links</li>
-        <li>Path monitoring and dynamic rerouting</li>
-    </ul>
+          <article class="card reveal">
+            <h3>Continuity layer (MPTCP)</h3>
+            <p>MPTCP is used to explore how a session can be maintained across path changes and partial failures.</p>
+          </article>
+        </div>
+      </div>
+    </section>
 
-</section>
+    <section class="section soft">
+      <div class="wrap split">
+        <div class="reveal">
+          <header class="section-head">
+            <h2>Traffic flow (high-level)</h2>
+            <p>A clear narrative suitable for promotional review and technical discussion.</p>
+          </header>
 
-<footer>
-    © 2026 PSBN Research Implementation | Carleton University
-</footer>
+          <ol class="ol">
+            <li><strong>Session starts</strong> from a client endpoint to a server endpoint using TCP.</li>
+            <li><strong>Both links</strong> are available as independent paths (LTE + 5G).</li>
+            <li><strong>MPTCP manages</strong> subflows across paths and prepares continuity behavior.</li>
+            <li><strong>A disruption occurs</strong> (loss, degradation, or transition) during an active session.</li>
+            <li><strong>Continuity is evaluated</strong> using evidence and planned metrics as testing is completed.</li>
+          </ol>
 
+          <div class="actions">
+            <a class="link" href="solution.html">Methodology →</a>
+          </div>
+        </div>
+
+        <div class="aside reveal">
+          <div class="aside-card">
+            <div class="aside-top">
+              <span class="pill">Image</span>
+              <span class="small">Antenna / RF reference</span>
+            </div>
+            <div class="aside-body">
+              <div class="media-figure">
+                <button type="button" class="js-zoom" aria-label="Expand image">
+                  <img class="media-img diagram" src="assets/antennadiagram.png" alt="Antenna diagram reference" loading="lazy" />
+                </button>
+              </div>
+              <div class="aside-title">RF reference</div>
+              <p class="aside-text">A visual reference supporting documentation of the RF/connectivity portion of the prototype.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="wrap cta-inner">
+        <div>
+          <h2>Next: impact & evaluation.</h2>
+          <p>How continuity will be summarized for stakeholders.</p>
+        </div>
+        <div class="cta-actions">
+          <a class="btn primary" href="impact.html">Impact</a>
+          <a class="btn" href="team.html">Team</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <div>
+        <div class="footer-title">PSBN Prototype</div>
+        <div class="footer-sub">© 2026 • Carleton University / Algonquin College</div>
+      </div>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="solution.html">Methodology</a>
+        <a href="impact.html">Impact</a>
+      </div>
+    </div>
+  </footer>
+
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="lightbox-close" type="button" aria-label="Close">×</button>
+    <div class="lightbox-inner">
+      <img id="lightboxImg" alt="" />
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      const btn = document.querySelector(".nav-toggle");
+      const menu = document.getElementById("mobileMenu");
+
+      if (btn && menu) {
+        btn.addEventListener("click", () => {
+          const expanded = btn.getAttribute("aria-expanded") === "true";
+          btn.setAttribute("aria-expanded", String(!expanded));
+          menu.classList.toggle("open");
+          menu.setAttribute("aria-hidden", expanded ? "true" : "false");
+        });
+      }
+
+      const revealEls = document.querySelectorAll(".reveal");
+      if (revealEls.length) {
+        const io = new IntersectionObserver((entries) => {
+          entries.forEach(e => {
+            if (e.isIntersecting) e.target.classList.add("show");
+          });
+        }, { threshold: 0.12 });
+        revealEls.forEach(el => io.observe(el));
+      }
+
+      const lightbox = document.getElementById("lightbox");
+      const lightboxImg = document.getElementById("lightboxImg");
+      const closeBtn = lightbox ? lightbox.querySelector(".lightbox-close") : null;
+
+      function openLightbox(src, alt) {
+        if (!lightbox || !lightboxImg) return;
+        lightboxImg.src = src;
+        lightboxImg.alt = alt || "";
+        lightbox.classList.add("open");
+        lightbox.setAttribute("aria-hidden", "false");
+        document.body.classList.add("no-scroll");
+      }
+
+      function closeLightbox() {
+        if (!lightbox) return;
+        lightbox.classList.remove("open");
+        lightbox.setAttribute("aria-hidden", "true");
+        document.body.classList.remove("no-scroll");
+        if (lightboxImg) lightboxImg.src = "";
+      }
+
+      document.querySelectorAll(".js-zoom img").forEach(img => {
+        img.addEventListener("click", () => openLightbox(img.src, img.alt));
+      });
+
+      if (closeBtn) closeBtn.addEventListener("click", closeLightbox);
+      if (lightbox) {
+        lightbox.addEventListener("click", (e) => {
+          if (e.target === lightbox) closeLightbox();
+        });
+      }
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") closeLightbox();
+      });
+    })();
+  </script>
 </body>
 </html>
