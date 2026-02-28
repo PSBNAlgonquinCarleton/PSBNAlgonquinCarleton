@@ -1,69 +1,301 @@
-<!DOCTYPE html>
-<html>
+<!-- index.html -->
+<!doctype html>
+<html lang="en">
 <head>
-    <title>PSBN Research Project</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PSBN Prototype | Public Safety Broadband Network</title>
 
-<nav>
-    <div class="logo">PSBN Research Project</div>
-    <div>
-        <a href="index.html">Home</a>
+  <meta name="description" content="Capstone project: a dual-band Public Safety Broadband Network (PSBN) prototype using Band 14 LTE, n77 5G, and Multipath TCP (MPTCP) to evaluate session continuity under disruptions." />
+  <meta property="og:title" content="PSBN Prototype | Public Safety Broadband Network" />
+  <meta property="og:description" content="Dual-band LTE + 5G with MPTCP. Architecture, methodology, and testing plan." />
+  <meta property="og:type" content="website" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header class="nav">
+    <div class="wrap nav-inner">
+      <a class="brand" href="index.html" aria-label="Home">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span class="brand-text">
+          <span class="brand-title">PSBN Prototype</span>
+          <span class="brand-sub">Capstone Project</span>
+        </span>
+      </a>
+
+      <nav class="nav-links" aria-label="Primary">
+        <a class="active" href="index.html">Home</a>
         <a href="solution.html">Methodology</a>
         <a href="architecture.html">Architecture</a>
         <a href="impact.html">Impact</a>
         <a href="team.html">Team</a>
-    </div>
-</nav>
+      </nav>
 
-<!-- HERO SECTION (ADD HERE) -->
-<div class="hero">
-    <h1>Public Safety Broadband Network Prototype</h1>
-    <p>
-        A dual-band resilient PSBN architecture leveraging Band 14 LTE, 
-        Band n77 5G, and Multipath TCP (MPTCP) to ensure continuous, 
-        mission-critical connectivity under failure conditions.
-    </p>
-</div>
+      <a class="nav-cta" href="#abstract">
+        Abstract <span aria-hidden="true">→</span>
+      </a>
 
-<div class="pulse-line"></div>
-
-<!-- MAIN CONTENT -->
-<section>
-
-    <h2>Project Overview</h2>
-
-    <div class="card">
-        <p>
-            This research project investigates the design and implementation of a 
-            resilient Public Safety Broadband Network (PSBN) prototype aligned with 
-            Canada’s national PSBN principles.
-        </p>
-
-        <p>
-            By leveraging dual-band cellular infrastructure and transport-layer 
-            multipathing, the system evaluates continuous connectivity, failover 
-            performance, and mission-critical reliability under simulated 
-            emergency scenarios.
-        </p>
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+        <span></span><span></span><span></span>
+      </button>
     </div>
 
-    <div class="card">
-        <h3>Core Objectives</h3>
-        <ul>
-            <li>Implement dual-band redundancy (Band 14 & n77)</li>
-            <li>Enable seamless failover using MPTCP</li>
-            <li>Test performance under network failure conditions</li>
-            <li>Validate alignment with Canadian PSBN principles</li>
-        </ul>
+    <div id="mobileMenu" class="mobile-menu" aria-hidden="true">
+      <div class="wrap mobile-inner">
+        <a class="mobile-link active" href="index.html">Home</a>
+        <a class="mobile-link" href="solution.html">Methodology</a>
+        <a class="mobile-link" href="architecture.html">Architecture</a>
+        <a class="mobile-link" href="impact.html">Impact</a>
+        <a class="mobile-link" href="team.html">Team</a>
+      </div>
     </div>
+  </header>
 
-</section>
+  <main>
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <p class="kicker">Public Safety Broadband Network • Dual-Band • Continuity Evaluation</p>
 
-<footer>
-    © 2026 PSBN Research Implementation | Carleton University
-</footer>
+          <h1 class="headline">
+            Public safety connectivity,
+            <span class="accent">built to stay online.</span>
+          </h1>
 
+          <p class="subhead">
+            We are developing a <strong>Public Safety Broadband Network (PSBN) prototype</strong> that integrates
+            <strong>Band 14 LTE</strong> and <strong>n77 5G</strong> with <strong>Multipath TCP (MPTCP)</strong>.
+            The platform is designed to evaluate whether <strong>TCP sessions remain usable</strong> during disruptions
+            such as link loss and handovers.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn primary" href="solution.html">Methodology</a>
+            <a class="btn" href="architecture.html">Architecture</a>
+          </div>
+
+          <div class="chips" aria-label="Highlights">
+            <span class="chip">Dual-band LTE + 5G</span>
+            <span class="chip">MPTCP session continuity</span>
+            <span class="chip">Outage + handover scenarios</span>
+          </div>
+        </div>
+
+        <div class="hero-media">
+          <div class="media-card">
+            <div class="media-top">
+              <span class="pill">Image</span>
+              <span class="media-note">System overview</span>
+            </div>
+
+            <div class="media-body">
+              <div class="media-figure">
+                <button type="button" class="js-zoom" aria-label="Expand image">
+                  <img class="media-img diagram" src="assets/systemdiagram.png" alt="PSBN system overview diagram" loading="lazy" />
+                </button>
+              </div>
+
+              <div class="media-title">System overview</div>
+              <p class="media-text">
+                A high-level view of the PSBN prototype platform and how dual-band connectivity and continuity fit together.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="band">
+      <div class="wrap band-grid">
+        <div class="band-card reveal">
+          <div class="label">Project type</div>
+          <div class="value">Capstone Prototype</div>
+          <div class="desc">A promotional project site aligned to BIT capstone requirements.</div>
+        </div>
+        <div class="band-card reveal">
+          <div class="label">Core focus</div>
+          <div class="value">Continuity + Reliability</div>
+          <div class="desc">Designed to evaluate session continuity during link disruption and handover.</div>
+        </div>
+        <div class="band-card reveal">
+          <div class="label">Support</div>
+          <div class="value">Research initiative</div>
+          <div class="desc">Supported by a government research initiative.</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="abstract" class="section">
+      <div class="wrap">
+        <header class="section-head reveal">
+          <h2>Abstract</h2>
+          <p>
+            This capstone investigates a dual-band Public Safety Broadband Network (PSBN) prototype that uses
+            Band 14 LTE and n77 5G alongside Multipath TCP (MPTCP) to evaluate whether TCP sessions can remain usable
+            during disruptions such as link loss and handovers. Evidence and results will be published as testing is completed.
+          </p>
+        </header>
+
+        <div class="cards">
+          <article class="card reveal">
+            <h3>What we’re building</h3>
+            <p>Dual-band connectivity with a transport-layer continuity approach (MPTCP) for TCP-based workflows.</p>
+          </article>
+
+          <article class="card reveal">
+            <h3>What we’ll evaluate</h3>
+            <p>Outage events, forced handovers, and degraded path conditions during active sessions.</p>
+          </article>
+
+          <article class="card reveal">
+            <h3>What we’ll publish</h3>
+            <p>Videos + diagrams/photos + simple plots/tables for continuity-focused metrics.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ✅ FIXED: Trailer + Image are now inside ONE .split grid -->
+    <section class="section soft">
+      <div class="wrap split">
+
+        <!-- LEFT: Trailer -->
+        <div class="reveal">
+          <header class="section-head">
+            <h2>Trailer</h2>
+            <p>A short promotional trailer.</p>
+          </header>
+
+          <div class="trailer">
+            <video class="trailer-video" controls playsinline preload="metadata">
+              <!-- If your file is .mp4 use type="video/mp4" -->
+              <source src="assets/earlysetupwalkthrough.mov" type="video/mp4">
+              <!-- If you only have .mov, use this instead:
+              <source src="assets/earlysetupwalkthrough.mov" type="video/quicktime">
+              -->
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+
+        <!-- RIGHT: Image -->
+        <div class="aside reveal">
+          <div class="aside-card">
+            <div class="aside-top">
+              <span class="pill">Image</span>
+              <span class="small">Lab / setup</span>
+            </div>
+            <div class="aside-body">
+              <div class="media-figure">
+                <button type="button" class="js-zoom" aria-label="Expand image">
+                  <img class="media-img photo" src="assets/earlystagesetup.jpg" alt="PSBN prototype setup reference" loading="lazy" />
+                </button>
+              </div>
+              <div class="aside-title">Early Stage Setup</div>
+              <p class="aside-text">A visual reference used for documenting the early prototype setup and workflow.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="wrap cta-inner">
+        <div>
+          <h2>Next: methodology, then architecture.</h2>
+          <p>Clear writeups for judges, sponsors, and technical reviewers.</p>
+        </div>
+        <div class="cta-actions">
+          <a class="btn primary" href="solution.html">Methodology</a>
+          <a class="btn" href="architecture.html">Architecture</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <div>
+        <div class="footer-title">PSBN Prototype</div>
+        <div class="footer-sub">© 2026 • Carleton University / Algonquin College</div>
+      </div>
+      <div class="footer-links">
+        <a href="team.html">Team</a>
+        <a href="impact.html">Impact</a>
+        <a href="architecture.html">Architecture</a>
+      </div>
+    </div>
+  </footer>
+
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="lightbox-close" type="button" aria-label="Close">×</button>
+    <div class="lightbox-inner">
+      <img id="lightboxImg" alt="" />
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      const btn = document.querySelector(".nav-toggle");
+      const menu = document.getElementById("mobileMenu");
+
+      if (btn && menu) {
+        btn.addEventListener("click", () => {
+          const expanded = btn.getAttribute("aria-expanded") === "true";
+          btn.setAttribute("aria-expanded", String(!expanded));
+          menu.classList.toggle("open");
+          menu.setAttribute("aria-hidden", expanded ? "true" : "false");
+        });
+      }
+
+      const revealEls = document.querySelectorAll(".reveal");
+      if (revealEls.length) {
+        const io = new IntersectionObserver((entries) => {
+          entries.forEach(e => {
+            if (e.isIntersecting) e.target.classList.add("show");
+          });
+        }, { threshold: 0.12 });
+        revealEls.forEach(el => io.observe(el));
+      }
+
+      const lightbox = document.getElementById("lightbox");
+      const lightboxImg = document.getElementById("lightboxImg");
+      const closeBtn = lightbox ? lightbox.querySelector(".lightbox-close") : null;
+
+      function openLightbox(src, alt) {
+        if (!lightbox || !lightboxImg) return;
+        lightboxImg.src = src;
+        lightboxImg.alt = alt || "";
+        lightbox.classList.add("open");
+        lightbox.setAttribute("aria-hidden", "false");
+        document.body.classList.add("no-scroll");
+      }
+
+      function closeLightbox() {
+        if (!lightbox) return;
+        lightbox.classList.remove("open");
+        lightbox.setAttribute("aria-hidden", "true");
+        document.body.classList.remove("no-scroll");
+        if (lightboxImg) lightboxImg.src = "";
+      }
+
+      document.querySelectorAll(".js-zoom img").forEach(img => {
+        img.addEventListener("click", () => openLightbox(img.src, img.alt));
+      });
+
+      if (closeBtn) closeBtn.addEventListener("click", closeLightbox);
+      if (lightbox) {
+        lightbox.addEventListener("click", (e) => {
+          if (e.target === lightbox) closeLightbox();
+        });
+      }
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") closeLightbox();
+      });
+    })();
+  </script>
 </body>
 </html>
