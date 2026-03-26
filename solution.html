@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Methodology | PSBN Prototype</title>
 
-  <meta name="description" content="Methodology for the PSBN capstone: how the dual-band platform is configured, how MPTCP is enabled, and how continuity will be evaluated under outage and handover scenarios." />
+  <meta name="description" content="Methodology for the PSBN capstone: how the PSBN testbed is configured, how multipath protocols such as MPTCP are evaluated, and how continuity will be studied under outage and handover scenarios." />
   <link rel="stylesheet" href="style.css" />
 </head>
 
@@ -54,16 +54,17 @@
       <div class="wrap page-hero-grid">
         <div>
           <p class="kicker">Methodology</p>
-          <h1 class="headline">How the platform is built and evaluated</h1>
+          <h1 class="headline">How the platform is configured and evaluated</h1>
           <p class="subhead">
-            This page outlines the workflow for configuring dual-band connectivity, enabling Multipath TCP (MPTCP),
-            and preparing controlled scenarios to evaluate session continuity under disruption.
+            This page outlines the workflow used to configure the <strong>PSBN testbed environment</strong>,
+            expose multiple network paths, and evaluate <strong>multipath protocols</strong> such as
+            <strong>MPTCP</strong> for public safety communication resilience.
           </p>
 
           <div class="chips">
-            <span class="chip">Band 14 LTE</span>
-            <span class="chip">n77 5G</span>
-            <span class="chip">MPTCP</span>
+            <span class="chip">PSBN testbed</span>
+            <span class="chip">Multipath protocols</span>
+            <span class="chip">Continuity evaluation</span>
           </div>
         </div>
 
@@ -76,13 +77,13 @@
           <div class="media-body">
             <div class="media-figure">
               <button type="button" class="js-zoom" aria-label="Expand image">
-                <img class="media-img diagram" src="assets/setupdiagram.jpg" alt="PSBN methodology / setup diagram" loading="lazy" />
+                <img class="media-img diagram" src="assets/setupdiagram.jpg" alt="PSBN methodology and setup diagram" loading="lazy" />
               </button>
             </div>
 
-            <div class="media-title">Workflow visual</div>
+            <div class="media-title">Testbed workflow visual</div>
             <p class="media-text">
-              This diagram supports the documentation of how the platform is configured and how evaluation scenarios are prepared.
+              This diagram supports documentation of how Band 14-enabled devices and complementary access networks are configured in the PSBN testbed.
             </p>
           </div>
         </div>
@@ -94,8 +95,8 @@
         <header class="section-head reveal">
           <h2>Workflow overview</h2>
           <p>
-            The methodology is structured as a repeatable pipeline: configure interfaces, enable continuity, then prepare
-            controlled disruption scenarios for evaluation once the platform is complete.
+            The methodology is structured as a repeatable pipeline: establish a PSBN testbed, expose multiple network paths,
+            evaluate multipath protocol behavior, then prepare controlled scenarios for continuity analysis.
           </p>
         </header>
 
@@ -103,13 +104,13 @@
           <div class="mstep reveal">
             <div class="mnum">1</div>
             <div class="mbody">
-              <div class="mtitle">Configure dual-band connectivity</div>
+              <div class="mtitle">Configure the PSBN testbed</div>
               <div class="mtext">
-                Bring up LTE and 5G interfaces, confirm independent connectivity, and document baseline network behavior
-                (addressing, routing, and stability).
+                Set up Band 14-enabled devices within a PSBN testbed environment and integrate complementary access networks
+                so that heterogeneous connectivity is available for evaluation.
               </div>
               <div class="mtags">
-                <span>LTE</span><span>5G</span><span>Routing</span>
+                <span>Band 14</span><span>Testbed</span><span>Heterogeneous networks</span>
               </div>
             </div>
           </div>
@@ -117,12 +118,13 @@
           <div class="mstep reveal">
             <div class="mnum">2</div>
             <div class="mbody">
-              <div class="mtitle">Enable MPTCP</div>
+              <div class="mtitle">Evaluate multipath protocol behavior</div>
               <div class="mtext">
-                Enable MPTCP support on the Linux-based gateway environment and confirm subflow establishment across both links.
+                Evaluate how <strong>multipath protocols</strong>, particularly <strong>MPTCP</strong>, allow
+                TCP-based applications to use multiple interfaces and maintain session continuity across available paths.
               </div>
               <div class="mtags">
-                <span>MPTCP</span><span>Subflows</span><span>Continuity</span>
+                <span>MPTCP</span><span>Multipath</span><span>Session continuity</span>
               </div>
             </div>
           </div>
@@ -132,10 +134,11 @@
             <div class="mbody">
               <div class="mtitle">Prepare disruption scenarios</div>
               <div class="mtext">
-                Define controlled events such as link loss, path degradation, and handover transitions to evaluate how sessions behave.
+                Define controlled events such as link loss, handover transitions, and degraded path conditions in order to
+                study how applications behave when network availability changes.
               </div>
               <div class="mtags">
-                <span>Outage</span><span>Handover</span><span>Degradation</span>
+                <span>Link loss</span><span>Handover</span><span>Degradation</span>
               </div>
             </div>
           </div>
@@ -145,7 +148,8 @@
             <div class="mbody">
               <div class="mtitle">Collect evidence and publish</div>
               <div class="mtext">
-                Once testing begins, evidence will be published as short videos and clear visual summaries (plots/tables) on the site.
+                Once testing is carried out, evidence will be published using short videos, captures, and clear visual summaries
+                such as plots and tables to show throughput, reliability, and adaptability outcomes.
               </div>
               <div class="mtags">
                 <span>Videos</span><span>Plots</span><span>Reporting</span>
@@ -161,24 +165,24 @@
         <header class="section-head reveal">
           <h2>Planned scenarios</h2>
           <p>
-            Scenarios are designed to demonstrate continuity behavior clearly. Final scenario details will be published as testing is completed.
+            Scenarios are designed to demonstrate how TCP-based applications behave across multiple network paths in a public safety setting.
           </p>
         </header>
 
         <div class="cards">
           <article class="card reveal">
             <h3>Link loss during active session</h3>
-            <p>Disable LTE or 5G while a TCP-based workflow is active and observe session behavior.</p>
+            <p>Disable one available path while a TCP-based workflow is active and observe continuity behavior.</p>
           </article>
 
           <article class="card reveal">
             <h3>Handover transition</h3>
-            <p>Trigger a path change and observe session stability, recovery behavior, and interruptions.</p>
+            <p>Trigger a change between available networks and observe stability, adaptability, and session usability.</p>
           </article>
 
           <article class="card reveal">
-            <h3>Path degradation</h3>
-            <p>Reduce bandwidth / increase latency on one path and observe traffic shift and continuity impact.</p>
+            <h3>Degraded path conditions</h3>
+            <p>Introduce reduced bandwidth or increased latency on one path and observe how traffic adapts across networks.</p>
           </article>
         </div>
       </div>
