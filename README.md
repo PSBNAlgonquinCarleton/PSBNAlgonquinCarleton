@@ -1,123 +1,152 @@
 # PSBNAlgonquinCarleton
-# PSBN Prototype - Public Safety Broadband Network (Capstone)
+# Public Safety Broadband Network (PSBN) Prototype
 
-A promotional GitHub Pages website for our capstone project: a **dual-band Public Safety Broadband Network (PSBN) prototype** that leverages **Band 14 LTE**, **n77 5G**, and **Multipath TCP (MPTCP)** to evaluate **mission-critical session continuity** during **outages, handovers, and network degradation**.
+A GitHub Pages website for our capstone project exploring a **Public Safety Broadband Network (PSBN)** prototype that integrates **Band 14 LTE**, **5G (n77)**, and **multipath protocols (MPTCP)** to evaluate **network resilience and session continuity** under real-world disruptions.
 
-## What this project is
+---
 
-Public safety communications cannot tolerate session drops during critical operations.
+## Overview
 
-This capstone explores a prototype architecture that:
+Public safety communications must remain reliable in environments where networks are **dynamic, heterogeneous, and sometimes unavailable**.
 
-- Uses **two independent cellular paths** (LTE + 5G)
-- Implements **MPTCP** for transport-layer session continuity
-- Prepares controlled **link failure and handover scenarios**
-- Evaluates continuity using measurable performance metrics
-- Aligns with principles of **resilient public safety broadband networks**
+This project investigates how **multipath transport protocols**, particularly **Multipath TCP (MPTCP)**, can improve:
 
-## Quick Summary
+- **Reliability**
+- **Throughput**
+- **Adaptability**
+- **Session continuity**
 
-**Project type:** Capstone prototype  
-**Goal:** Maintain usable TCP sessions during disruption  
-**Bands:** Band 14 (LTE) + n77 (5G)  
-**Transport layer:** Multipath TCP (MPTCP)  
-**Testing focus:** link loss, handover, path degradation  
-**Outputs:** structured demo scenarios + measurable continuity metrics  
+The work is conducted using a **PSBN testbed environment**, where Band 14-enabled devices are combined with additional network technologies.
 
-## Website Pages
+---
 
-This repository is deployed as a **GitHub Pages promotional site**.
+## Project Objective
 
-- `index.html` - Project overview  
-- `solution.html` - Methodology and testing workflow  
-- `architecture.html` - System architecture and traffic flow  
-- `impact.html` - Evaluation framework and metrics  
-- `team.html` - Capstone students and advisors  
+The goal of this project is to:
 
-## Methodology Overview
+> **Experimentally evaluate whether TCP-based applications remain usable during disruptions such as link failure, handover, and degraded network conditions.**
 
-The prototype workflow follows a structured process:
+Rather than building a final system, this project focuses on:
 
-1. **Dual-band configuration**  
-   Establish LTE and 5G interfaces independently.
+- **Evaluating multipath communication behavior**
+- **Understanding performance under failure scenarios**
+- **Demonstrating continuity using real applications**
 
-2. **MPTCP enablement**  
-   Configure MPTCP within a Linux-based networking environment.
+---
 
-3. **Disruption scenario preparation**  
-   Define controlled events such as:
-   - Interface shutdown
-   - Handover transitions
-   - Path degradation
+## Key Concepts
 
-4. **Evidence collection**  
-   Capture results using:
-   - Scenario demonstration videos
-   - Plots and tables
-   - Concise technical summaries
+- **Public Safety Broadband Network (PSBN)**
+- **Band 14 LTE (public safety spectrum)**
+- **5G n77**
+- **Multipath TCP (MPTCP)**
+- **Heterogeneous network environments**
+- **Transport-layer session continuity**
+
+---
+
+## Methodology (High-Level)
+
+1. Establish baseline connectivity across available networks  
+2. Enable multipath communication (MPTCP)  
+3. Introduce controlled disruptions:
+   - Link failure
+   - Handover events
+   - Network degradation  
+4. Measure system behavior and application-level impact  
+
+---
 
 ## Demo Scenarios (Planned)
 
-1. **Link Failure → Continuity**  
-   Disable LTE or 5G during an active TCP session and observe session behavior.
+- **Link Failure During Active Session**  
+  Evaluate whether sessions remain active when a network path is lost  
 
-2. **Handover Under Load**  
-   Trigger path transitions during sustained traffic to evaluate stability.
+- **Handover Under Load**  
+  Observe performance during transitions between networks  
 
-3. **Degraded Path Performance**  
-   Introduce latency or bandwidth constraints and measure recovery characteristics.
+- **Degraded Network Conditions**  
+  Analyze how traffic adapts when one path is weakened  
 
-## Key Metrics (Examples)
+---
 
-- **Session persistence during link failure**
-- **Recovery time after disruption**
-- **Latency variation across transitions**
-- **Throughput distribution across subflows**
-- **Packet loss during handover events**
+## Key Metrics
 
-## Technologies Used
+- **Session continuity**
+- **Recovery time**
+- **Throughput stability**
+- **Application usability during disruptions**
+- **Failover consistency**
 
-- Linux-based networking environment  
-- Multipath TCP (MPTCP)  
-- LTE (Band 14)  
-- 5G (n77)  
-- Network monitoring utilities  
+---
 
-## Project Context
+## System Approach
 
-This capstone prototype is developed within a research initiative focused on resilient communication architectures for public safety environments.
+The prototype operates in a **multi-network environment**, where:
 
-The repository serves as:
+- Band 14 LTE acts as a **public safety anchor network**
+- Additional networks (e.g., 5G, WiFi) provide **complementary connectivity**
+- MPTCP enables **simultaneous use of multiple paths**
 
-- Capstone documentation  
-- Promotional project material  
-- Architecture and methodology overview  
+This approach reflects real-world conditions where **PSBN is not the only available network**.
+
+---
+
+## Website Structure
+
+This repository is deployed using **GitHub Pages**.
+
+- `index.html` — Overview + abstract + trailer  
+- `solution.html` — Methodology and workflow  
+- `architecture.html` — System components and traffic flow  
+- `impact.html` — Metrics and evaluation focus  
+- `team.html` — Students and advisors  
+
+---
+
+## Project Status
+
+This project is currently **in development**.
+
+- Prototype setup: in progress  
+- Scenario testing: planned  
+- Results and media: to be added  
+
+---
 
 ## Team
-### Capstone Students
+
+**Capstone Students**
 - Maxx Kennedy  
 - Xander Xu  
 - Samarth Doraiswami  
 
-### Advisors
-- Wahab Almuhtadi - Algonquin College  
-- Jordan Melzer - TELUS  
+**Advisors**
+- Wahab Almuhtadi (Algonquin College)  
+- Jordan Melzer (TELUS)
 
-Carleton University / Algonquin College 
+---
 
-## Project Status
+## Acknowledgement
 
-Prototype platform: **In development**  
-Testing phase: **Planned**  
-Results publication: **Pending evaluation completion**
+This project is supported by a **government-funded research initiative** and conducted within the **Algonquin College PSBN testbed environment**.
 
-## Repo Structure
-/ (root)
-│
-├── index.html
-├── solution.html
-├── architecture.html
-├── impact.html
-├── team.html
-├── style.css
-└── assets/
+---
+
+## Deployment
+
+This site is intended for deployment on **GitHub Pages** and serves as promotional material for:
+
+- Capstone evaluation
+- Academic presentation
+- Industry demonstration
+
+---
+
+## Future Work
+
+- Experimental validation across more network types  
+- Evaluation of additional multipath protocols (e.g., QUIC-based approaches)  
+- Expanded real-world public safety scenarios  
+
+---
