@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Architecture | PSBN Prototype</title>
 
-  <meta name="description" content="Architecture overview of the PSBN prototype: dual-band LTE/5G connectivity with a Linux-based MPTCP continuity layer." />
+  <meta name="description" content="Architecture overview of the PSBN prototype: a heterogeneous network environment combining Band 14 LTE, complementary access networks, and multipath protocol evaluation using MPTCP." />
   <link rel="stylesheet" href="style.css" />
 </head>
 
@@ -56,14 +56,16 @@
           <p class="kicker">Architecture</p>
           <h1 class="headline">How the system fits together</h1>
           <p class="subhead">
-            The PSBN prototype integrates LTE and 5G connectivity and prepares a Linux-based MPTCP continuity layer for
-            controlled evaluation of session behavior under disruption.
+            The PSBN prototype is built as a <strong>heterogeneous network environment</strong> where
+            <strong>Band 14 LTE</strong> operates alongside complementary access networks.
+            This architecture supports the <strong>experimental evaluation of multipath protocols</strong>,
+            particularly <strong>MPTCP</strong>, for public safety communication resilience.
           </p>
 
           <div class="chips">
-            <span class="chip">Dual-band links</span>
-            <span class="chip">Linux-based gateway</span>
-            <span class="chip">MPTCP continuity</span>
+            <span class="chip">Heterogeneous networks</span>
+            <span class="chip">Band 14 + complementary access</span>
+            <span class="chip">Multipath protocol evaluation</span>
           </div>
         </div>
 
@@ -81,7 +83,7 @@
 
             <div class="media-title">Architecture diagram</div>
             <p class="media-text">
-              A system-level view of how dual-band connectivity and continuity components connect in the prototype.
+              A system-level view of how Band 14 LTE, complementary networks, and multipath-enabled endpoints connect in the prototype.
             </p>
           </div>
         </div>
@@ -93,25 +95,31 @@
         <header class="section-head reveal">
           <h2>Core components</h2>
           <p>
-            The platform is assembled from connectivity, gateway, and endpoint components. Specific hardware details can be
-            added as your final build is locked in.
+            The platform is assembled from connectivity, gateway, and endpoint components within a PSBN testbed
+            designed to evaluate communication behavior across multiple networks.
           </p>
         </header>
 
         <div class="cards">
           <article class="card reveal">
-            <h3>Dual-band connectivity</h3>
-            <p>LTE (Band 14) and 5G (n77) provide independent network paths intended for redundancy and continuity evaluation.</p>
+            <h3>Band 14 PSBN access</h3>
+            <p>
+              Band 14 acts as a public safety anchor network within the testbed, providing a dedicated public safety path for evaluation.
+            </p>
           </article>
 
           <article class="card reveal">
-            <h3>Linux-based gateway</h3>
-            <p>A Linux environment configured to support MPTCP and manage routing/policy behavior across interfaces.</p>
+            <h3>Complementary access networks</h3>
+            <p>
+              Additional networks such as 5G and WiFi provide alternative communication paths, reflecting the heterogeneous conditions public safety users may encounter.
+            </p>
           </article>
 
           <article class="card reveal">
-            <h3>Continuity layer (MPTCP)</h3>
-            <p>MPTCP is used to explore how a session can be maintained across path changes and partial failures.</p>
+            <h3>Multipath protocol layer</h3>
+            <p>
+              Multipath protocols, especially MPTCP, are used to evaluate how TCP-based applications can leverage multiple available paths for improved resilience.
+            </p>
           </article>
         </div>
       </div>
@@ -122,15 +130,15 @@
         <div class="reveal">
           <header class="section-head">
             <h2>Traffic flow (high-level)</h2>
-            <p>A clear narrative suitable for promotional review and technical discussion.</p>
+            <p>A narrative that reflects how public safety applications interact with multiple networks in the testbed.</p>
           </header>
 
           <ol class="ol">
-            <li><strong>Session starts</strong> from a client endpoint to a server endpoint using TCP.</li>
-            <li><strong>Both links</strong> are available as independent paths (LTE + 5G).</li>
-            <li><strong>MPTCP manages</strong> subflows across paths and prepares continuity behavior.</li>
-            <li><strong>A disruption occurs</strong> (loss, degradation, or transition) during an active session.</li>
-            <li><strong>Continuity is evaluated</strong> using evidence and planned metrics as testing is completed.</li>
+            <li><strong>An application starts</strong> from an endpoint using TCP-based communication.</li>
+            <li><strong>Multiple networks are available</strong>, including Band 14 LTE and complementary access paths.</li>
+            <li><strong>MPTCP manages subflows</strong> across these paths to evaluate continuity, reliability, and adaptability.</li>
+            <li><strong>A disruption occurs</strong>, such as link loss, handover, or path degradation.</li>
+            <li><strong>Application behavior is evaluated</strong> using evidence, captures, and planned continuity metrics.</li>
           </ol>
 
           <div class="actions">
@@ -151,7 +159,9 @@
                 </button>
               </div>
               <div class="aside-title">RF reference</div>
-              <p class="aside-text">A visual reference supporting documentation of the RF/connectivity portion of the prototype.</p>
+              <p class="aside-text">
+                A visual reference supporting documentation of the RF and access-network portion of the prototype environment.
+              </p>
             </div>
           </div>
         </div>
@@ -162,7 +172,7 @@
       <div class="wrap cta-inner">
         <div>
           <h2>Next: impact & evaluation.</h2>
-          <p>How continuity will be summarized for stakeholders.</p>
+          <p>How resilience and continuity will be summarized for stakeholders.</p>
         </div>
         <div class="cta-actions">
           <a class="btn primary" href="impact.html">Impact</a>
