@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Impact | PSBN Prototype</title>
 
-  <meta name="description" content="Impact and evaluation plan for the PSBN prototype: continuity metrics, evidence reporting, and stakeholder-ready summaries." />
+  <meta name="description" content="Impact and evaluation plan for the PSBN prototype: multipath resilience, continuity metrics, and stakeholder-ready summaries." />
   <link rel="stylesheet" href="style.css" />
 </head>
 
@@ -54,16 +54,17 @@
       <div class="wrap page-hero-grid">
         <div>
           <p class="kicker">Impact</p>
-          <h1 class="headline">What we aim to show</h1>
+          <h1 class="headline">Evaluating network resilience</h1>
           <p class="subhead">
-            The PSBN prototype is designed to evaluate continuity behavior and report outcomes using clear metrics
-            and real evidence (videos + plots/tables) as testing is completed.
+            The PSBN prototype is intended to evaluate how multipath communication can improve
+            <strong>throughput</strong>, <strong>reliability</strong>, and <strong>adaptability</strong>
+            for TCP-based applications operating across dynamic and heterogeneous network conditions.
           </p>
 
           <div class="chips">
-            <span class="chip">Continuity</span>
-            <span class="chip">Recovery behavior</span>
-            <span class="chip">Stability</span>
+            <span class="chip">Throughput</span>
+            <span class="chip">Reliability</span>
+            <span class="chip">Adaptability</span>
           </div>
         </div>
 
@@ -93,25 +94,26 @@
         <header class="section-head reveal">
           <h2>Planned evaluation metrics</h2>
           <p>
-            Metrics are selected to match the project goal: determine whether sessions remain usable through disruption,
-            and quantify recovery behavior once testing begins.
+            Metrics are selected to match the project goal: evaluate whether multipath communication improves
+            continuity and usability for TCP-based applications under disruption, while also capturing changes
+            in throughput, recovery behavior, and adaptability.
           </p>
         </header>
 
         <div class="cards">
           <article class="card reveal">
             <h3>Session continuity</h3>
-            <p>Whether a TCP session remains usable across link loss and path transition events.</p>
+            <p>Whether a TCP-based application remains usable across link loss and network transition events.</p>
           </article>
 
           <article class="card reveal">
             <h3>Recovery time</h3>
-            <p>The time required to return to stable communication after a disruption event.</p>
+            <p>The time required for communication to stabilize after a disruption or path change.</p>
           </article>
 
           <article class="card reveal">
-            <h3>Stability under change</h3>
-            <p>Throughput/latency behavior during transitions and under degraded path conditions.</p>
+            <h3>Adaptability under change</h3>
+            <p>How effectively traffic adjusts across available networks during degradation, handover, and link failure.</p>
           </article>
         </div>
       </div>
