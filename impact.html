@@ -1,168 +1,355 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Impact | PSBN Prototype</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    body {
-      margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      background-color: #0b0b0b;
-      color: #ffffff;
-    }
-
-    header {
-      padding: 40px;
-      text-align: center;
-      font-size: 28px;
-      font-weight: 600;
-    }
-
-    .section {
-      max-width: 1100px;
-      margin: 80px auto;
-      padding: 0 20px;
-    }
-
-    .title {
-      font-size: 36px;
-      font-weight: 600;
-      margin-bottom: 20px;
-    }
-
-    .text {
-      font-size: 18px;
-      line-height: 1.6;
-      color: #cfcfcf;
-      max-width: 700px;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 30px;
-      margin-top: 40px;
-    }
-
-    .card {
-      background: #141414;
-      padding: 25px;
-      border-radius: 18px;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 10px 30px rgba(0,0,0,0.6);
-    }
-
-    .card h3 {
-      margin-top: 0;
-      font-size: 22px;
-    }
-
-    .card p {
-      color: #bdbdbd;
-      font-size: 15px;
-      line-height: 1.5;
-    }
-
-    img, video {
-      width: 100%;
-      border-radius: 14px;
-      margin-top: 15px;
-    }
-
-    footer {
-      text-align: center;
-      padding: 60px 20px;
-      color: #777;
-      font-size: 14px;
-    }
-  </style>
+  <meta name="description" content="Results and demonstrated impact of the PSBN Prototype, including MPTCP continuity, Amarisoft connectivity, TAK integration, and real device messaging." />
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
+  <header class="nav">
+    <div class="wrap nav-inner">
+      <a class="brand" href="index.html" aria-label="Home">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span class="brand-text">
+          <span class="brand-title">PSBN Prototype</span>
+          <span class="brand-sub">Capstone Project</span>
+        </span>
+      </a>
 
-<header>
-  Real-World Impact
-</header>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="solution.html">Methodology</a>
+        <a href="architecture.html">Architecture</a>
+        <a class="active" href="impact.html">Impact</a>
+        <a href="team.html">Team</a>
+      </nav>
 
-<div class="section">
-  <div class="title">Why This Matters</div>
-  <div class="text">
-    Current emergency communication systems fail during critical moments due to network overload,
-    lack of interoperability, and broken session continuity. Our PSBN prototype solves this by enabling
-    seamless connectivity across WiFi, LTE, and 5G networks using Multipath TCP and modern 5G infrastructure.
-  </div>
-</div>
+      <a class="nav-cta" href="team.html">Team →</a>
 
-<div class="section">
-  <div class="grid">
-
-    <div class="card">
-      <h3>Session Persistence</h3>
-      <p>
-        Applications remain active even when switching between networks. MPTCP ensures continuous
-        data flow without reconnecting or losing state.
-      </p>
-      <img src="MPTCP.jpg">
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+        <span></span><span></span><span></span>
+      </button>
     </div>
 
-    <div class="card">
-      <h3>TAK Integration</h3>
-      <p>
-        Real-time situational awareness using TAK enables first responders to share live positions,
-        messages, and data across the network.
-      </p>
-      <img src="amarisoft-device.jpg">
+    <div id="mobileMenu" class="mobile-menu" aria-hidden="true">
+      <div class="wrap mobile-inner">
+        <a class="mobile-link" href="index.html">Home</a>
+        <a class="mobile-link" href="solution.html">Methodology</a>
+        <a class="mobile-link" href="architecture.html">Architecture</a>
+        <a class="mobile-link active" href="impact.html">Impact</a>
+        <a class="mobile-link" href="team.html">Team</a>
+      </div>
     </div>
+  </header>
 
-    <div class="card">
-      <h3>Real Hardware Testbed</h3>
-      <p>
-        Built using SDR-based 5G infrastructure, routers, and antennas to simulate real-world
-        public safety environments.
-      </p>
-      <img src="USRP.jpg">
+  <main>
+    <section class="page-hero">
+      <div class="wrap page-hero-grid">
+        <div>
+          <p class="kicker">Impact</p>
+          <h1 class="headline">Demonstrated outcomes</h1>
+          <p class="subhead">
+            The PSBN Prototype demonstrates working continuity mechanisms, connected wireless devices,
+            real signaling activity, TAK-based situational awareness, and messaging across the network.
+          </p>
+
+          <div class="chips">
+            <span class="chip">MPTCP continuity</span>
+            <span class="chip">Amarisoft activity</span>
+            <span class="chip">TAK integration</span>
+          </div>
+        </div>
+
+        <div class="media-card">
+          <div class="media-top">
+            <span class="pill">Video</span>
+            <span class="media-note">Continuity demo</span>
+          </div>
+
+          <div class="media-body">
+            <video class="trailer-video" controls playsinline preload="metadata">
+              <source src="assets/mptcp-demo.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+
+            <div class="media-title">MPTCP demonstration</div>
+            <p class="media-text">
+              Demonstration of continuity behavior using Multipath TCP as part of the PSBN workflow.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <header class="section-head">
+          <h2>Core results</h2>
+          <p>
+            The platform demonstrates working transport-layer continuity, wireless activity,
+            application-layer visibility, and communication across connected devices.
+          </p>
+        </header>
+
+        <div class="cards">
+          <article class="card">
+            <h3>Continuity behavior</h3>
+            <p>MPTCP was demonstrated as part of the continuity workflow, supporting resilient session behavior across changing network conditions.</p>
+          </article>
+
+          <article class="card">
+            <h3>Wireless platform activity</h3>
+            <p>Amarisoft logs and end-device interaction show that the network environment is functioning with observable attach and signaling behavior.</p>
+          </article>
+
+          <article class="card">
+            <h3>Operational awareness</h3>
+            <p>TAK and WebTAK provide a shared live view for monitoring devices, locations, and communication across the network.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section soft">
+      <div class="wrap impact-split">
+        <div>
+          <header class="section-head">
+            <h2>Amarisoft device and attach activity</h2>
+            <p>
+              The Amarisoft platform shows connected-device interaction and signaling activity within the wireless testbed.
+            </p>
+          </header>
+
+          <div class="impact-images">
+            <div class="impact-card">
+              <div class="media-figure">
+                <button type="button" class="js-zoom" aria-label="Expand image">
+                  <img src="assets/amarisoft-device.jpg" alt="Connected device" />
+                </button>
+              </div>
+              <h3>Live device interaction</h3>
+              <p>
+                A mobile device connected to the network, demonstrating real participation in the wireless environment.
+              </p>
+            </div>
+
+            <div class="impact-card">
+              <div class="media-figure">
+                <button type="button" class="js-zoom" aria-label="Expand image">
+                  <img src="assets/amarisoft-logs.png" alt="Amarisoft logs" />
+                </button>
+              </div>
+              <h3>Network signaling evidence</h3>
+              <p>
+                Amarisoft logs showing attach procedures, signaling activity, and session-level communication.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="impact-result">
+          <div class="media-card">
+            <div class="media-top">
+              <span class="pill">Result</span>
+              <span class="media-note">Wireless platform evidence</span>
+            </div>
+
+            <div class="media-body">
+              <p class="media-text">
+                These results confirm that the wireless platform operates as a real system,
+                supporting device connectivity, signaling exchange, and observable network behavior.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap impact-split">
+        <div>
+          <header class="section-head">
+            <h2>TAK system integration</h2>
+            <p>
+              TAK services provide a shared operational interface for monitoring devices,
+              visualizing positions, and exchanging information across the network.
+            </p>
+          </header>
+
+          <div class="impact-images">
+            <div class="impact-card">
+              <div class="media-figure">
+                <button type="button" class="js-zoom" aria-label="Expand image">
+                  <img src="assets/tak-metrics.jpg" alt="TAK metrics dashboard" />
+                </button>
+              </div>
+              <h3>TAK metrics dashboard</h3>
+              <p>
+                Server-side metrics showing uptime, connected clients, and system resource usage.
+              </p>
+            </div>
+
+            <div class="impact-card">
+              <div class="media-figure">
+                <button type="button" class="js-zoom" aria-label="Expand image">
+                  <img src="assets/webtak-map.jpg" alt="WebTAK map view" />
+                </button>
+              </div>
+              <h3>Real-time map interface</h3>
+              <p>
+                WebTAK displaying connected entities in a shared operational map view.
+              </p>
+            </div>
+
+            <div class="impact-card">
+              <div class="media-figure">
+                <button type="button" class="js-zoom" aria-label="Expand image">
+                  <img src="assets/amarisoft-message.png" alt="Message sent through the network" />
+                </button>
+              </div>
+              <h3>Network messaging</h3>
+              <p>
+                A message sent through the terminal to devices on the network, demonstrating successful communication delivery.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="impact-result">
+          <div class="media-card">
+            <div class="media-top">
+              <span class="pill">Result</span>
+              <span class="media-note">Application-layer evidence</span>
+            </div>
+
+            <div class="media-body">
+              <p class="media-text">
+                TAK integration confirms that the platform supports real-time coordination,
+                visualization, and communication across connected users and devices.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section soft">
+      <div class="wrap">
+        <header class="section-head">
+          <h2>Overall impact</h2>
+          <p>
+            The PSBN Prototype combines continuity concepts, wireless infrastructure,
+            and operational applications into one integrated platform.
+          </p>
+        </header>
+
+        <div class="cards">
+          <article class="card">
+            <h3>Working wireless environment</h3>
+            <p>Devices successfully connect and interact within a controlled PSBN testbed.</p>
+          </article>
+
+          <article class="card">
+            <h3>Visible network behavior</h3>
+            <p>Logs and dashboards provide direct evidence of signaling, sessions, and system health.</p>
+          </article>
+
+          <article class="card">
+            <h3>Operational functionality</h3>
+            <p>TAK services support real-time visualization and communication between connected endpoints.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="wrap cta-inner">
+        <div>
+          <h2>View the team behind the project.</h2>
+          <p>Meet the students and advisors who developed the PSBN Prototype.</p>
+        </div>
+        <div class="cta-actions">
+          <a class="btn primary" href="team.html">Team</a>
+          <a class="btn" href="architecture.html">Architecture</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <div>
+        <div class="footer-title">PSBN Prototype</div>
+        <div class="footer-sub">© 2026 • Carleton University / Algonquin College</div>
+      </div>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="solution.html">Methodology</a>
+        <a href="team.html">Team</a>
+      </div>
     </div>
+  </footer>
 
-    <div class="card">
-      <h3>Live Demo</h3>
-      <p>
-        Demonstration of seamless handover between networks while maintaining active sessions.
-      </p>
-      <video controls>
-        <source src="mptcp-demo.mp4" type="video/mp4">
-      </video>
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="lightbox-close" type="button" aria-label="Close">×</button>
+    <div class="lightbox-inner">
+      <img id="lightboxImg" alt="" />
     </div>
-
   </div>
-</div>
 
-<div class="section">
-  <div class="title">Technical Impact</div>
-  <div class="text">
-    Our system demonstrates that session persistence can be achieved through a hybrid approach:
-    network-layer roaming for voice and device-layer MPTCP for data. This aligns with real-world
-    PSBN research goals and validates feasibility in a controlled testbed environment :contentReference[oaicite:0]{index=0}.
-  </div>
-</div>
+  <script>
+    (function () {
+      const btn = document.querySelector(".nav-toggle");
+      const menu = document.getElementById("mobileMenu");
 
-<div class="section">
-  <div class="title">Future Potential</div>
-  <div class="text">
-    This prototype lays the foundation for nationwide deployment, enabling reliable communication
-    for first responders, improved coordination between agencies, and advanced applications such as
-    drones, IoT sensors, and real-time video streaming.
-  </div>
-</div>
+      if (btn && menu) {
+        btn.addEventListener("click", () => {
+          const expanded = btn.getAttribute("aria-expanded") === "true";
+          btn.setAttribute("aria-expanded", String(!expanded));
+          menu.classList.toggle("open");
+          menu.setAttribute("aria-hidden", expanded ? "true" : "false");
+        });
+      }
 
-<footer>
-  PSBN Capstone Project • Carleton University & Algonquin College
-</footer>
+      const lightbox = document.getElementById("lightbox");
+      const lightboxImg = document.getElementById("lightboxImg");
+      const closeBtn = lightbox ? lightbox.querySelector(".lightbox-close") : null;
 
+      function openLightbox(src, alt) {
+        if (!lightbox || !lightboxImg) return;
+        lightboxImg.src = src;
+        lightboxImg.alt = alt || "";
+        lightbox.classList.add("open");
+        lightbox.setAttribute("aria-hidden", "false");
+        document.body.classList.add("no-scroll");
+      }
+
+      function closeLightbox() {
+        if (!lightbox) return;
+        lightbox.classList.remove("open");
+        lightbox.setAttribute("aria-hidden", "true");
+        document.body.classList.remove("no-scroll");
+        if (lightboxImg) lightboxImg.src = "";
+      }
+
+      document.querySelectorAll(".js-zoom img").forEach(img => {
+        img.addEventListener("click", () => openLightbox(img.src, img.alt));
+      });
+
+      if (closeBtn) closeBtn.addEventListener("click", closeLightbox);
+      if (lightbox) {
+        lightbox.addEventListener("click", (e) => {
+          if (e.target === lightbox) closeLightbox();
+        });
+      }
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") closeLightbox();
+      });
+    })();
+  </script>
 </body>
 </html>
