@@ -96,11 +96,11 @@ This approach reflects real-world conditions where **PSBN is not the only availa
 
 This repository is deployed using **GitHub Pages**.
 
-- `index.html` — Overview + abstract + trailer  
-- `solution.html` — Methodology and workflow  
-- `architecture.html` — System components and traffic flow  
-- `impact.html` — Metrics and evaluation focus  
-- `team.html` — Students and advisors  
+- `index.html` - Overview + abstract + trailer  
+- `solution.html` - Methodology and workflow  
+- `architecture.html` - System components and traffic flow  
+- `impact.html` - Metrics and evaluation focus  
+- `team.html` - Students and advisors  
 
 ---
 
