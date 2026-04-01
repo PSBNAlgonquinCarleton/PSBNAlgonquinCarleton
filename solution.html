@@ -1,3 +1,4 @@
+<!-- solution.html -->
 <!doctype html>
 <html lang="en">
 <head>
@@ -5,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Methodology | PSBN Prototype</title>
 
-  <meta name="description" content="Methodology for the PSBN Prototype: dual-band LTE + 5G architecture with MPTCP and system-level integration for continuity-focused evaluation." />
+  <meta name="description" content="Methodology for the PSBN capstone: how the PSBN testbed is configured, how multipath protocols such as MPTCP are evaluated, and how continuity is studied under outage and handover scenarios." />
   <link rel="stylesheet" href="style.css" />
 </head>
 
@@ -28,189 +29,154 @@
         <a href="team.html">Team</a>
       </nav>
 
-      <a class="nav-cta" href="architecture.html">Architecture →</a>
+      <a class="nav-cta" href="#workflow">
+        Workflow →
+      </a>
     </div>
   </header>
 
   <main>
     <section class="page-hero">
-      <div class="wrap">
-        <p class="kicker">Methodology</p>
-        <h1 class="headline">How the system is built and evaluated</h1>
-        <p class="subhead">
-          The PSBN Prototype combines wireless infrastructure, transport-layer continuity, and application-layer tools
-          into a unified system. This methodology outlines how each layer is designed and integrated to support
-          resilient connectivity.
-        </p>
+      <div class="wrap page-hero-grid">
+        <div>
+          <p class="kicker">Methodology</p>
+          <h1 class="headline">How the platform is configured and evaluated</h1>
+          <p class="subhead">
+            This page outlines the workflow used to configure the <strong>PSBN testbed environment</strong>,
+            expose multiple network paths, and evaluate <strong>multipath protocols</strong> such as
+            <strong>MPTCP</strong> for public safety communication resilience.
+          </p>
+
+          <div class="chips">
+            <span class="chip">PSBN testbed</span>
+            <span class="chip">Multipath protocols</span>
+            <span class="chip">Continuity evaluation</span>
+          </div>
+        </div>
+
+        <div class="media-card">
+          <div class="media-top">
+            <span class="pill">Image</span>
+            <span class="media-note">Setup reference</span>
+          </div>
+
+          <div class="media-body">
+            <div class="media-figure">
+              <button type="button" class="js-zoom">
+                <img class="media-img diagram" src="assets/setupdiagram.jpg" alt="PSBN methodology and setup diagram" />
+              </button>
+            </div>
+
+            <div class="media-title">Testbed workflow visual</div>
+            <p class="media-text">
+              A reference diagram illustrating how devices, network paths, and system components are arranged within the PSBN testbed.
+            </p>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section class="section">
+    <section id="workflow" class="section">
       <div class="wrap">
         <header class="section-head">
-          <h2>System approach</h2>
+          <h2>Workflow overview</h2>
           <p>
-            The system is structured across multiple layers, each responsible for a specific aspect of connectivity,
-            continuity, and operational visibility.
+            The methodology follows a structured pipeline: configure the PSBN testbed, expose multiple network paths,
+            evaluate multipath protocol behavior, and analyze continuity under controlled disruptions.
           </p>
         </header>
 
-        <div class="cards">
-          <article class="card">
-            <h3>Wireless layer</h3>
-            <p>
-              The platform uses a Linux-based wireless environment with Amarisoft to emulate LTE/5G behavior,
-              enabling device attachment, signaling, and data exchange within a controlled testbed.
-            </p>
-          </article>
+        <div class="method-steps">
 
-          <article class="card">
-            <h3>Transport layer</h3>
-            <p>
-              Multipath TCP (MPTCP) is used to maintain session continuity across multiple network paths,
-              allowing traffic to persist even when one path degrades or disconnects.
-            </p>
-          </article>
+          <div class="mstep">
+            <div class="mnum">1</div>
+            <div class="mbody">
+              <div class="mtitle">Configure the PSBN testbed</div>
+              <div class="mtext">
+                Band 14-enabled devices are configured within a PSBN testbed and integrated with complementary access networks,
+                enabling heterogeneous connectivity for evaluation.
+              </div>
+              <div class="mtags">
+                <span>Band 14</span><span>Testbed</span><span>Multi-network</span>
+              </div>
+            </div>
+          </div>
 
-          <article class="card">
-            <h3>Application layer</h3>
-            <p>
-              TAK / WebTAK provides a real-time operational interface, enabling device tracking, messaging,
-              and system monitoring across the network.
-            </p>
-          </article>
+          <div class="mstep">
+            <div class="mnum">2</div>
+            <div class="mbody">
+              <div class="mtitle">Evaluate multipath protocol behavior</div>
+              <div class="mtext">
+                Multipath TCP (MPTCP) enables TCP-based applications to utilize multiple interfaces simultaneously,
+                maintaining session continuity across available network paths.
+              </div>
+              <div class="mtags">
+                <span>MPTCP</span><span>Multipath</span><span>Continuity</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="mstep">
+            <div class="mnum">3</div>
+            <div class="mbody">
+              <div class="mtitle">Apply disruption scenarios</div>
+              <div class="mtext">
+                Controlled events such as link loss, handovers, and degraded network conditions are introduced to
+                observe how active sessions behave under changing connectivity.
+              </div>
+              <div class="mtags">
+                <span>Link loss</span><span>Handover</span><span>Degradation</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="mstep">
+            <div class="mnum">4</div>
+            <div class="mbody">
+              <div class="mtitle">Analyze and present results</div>
+              <div class="mtext">
+                Results are documented using system logs, visual captures, and performance summaries such as
+                throughput stability and session continuity.
+              </div>
+              <div class="mtags">
+                <span>Logs</span><span>Metrics</span><span>Visualization</span>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
 
     <section class="section soft">
-      <div class="wrap split">
-        <div>
-          <header class="section-head">
-            <h2>Core workflow</h2>
-            <p>
-              The system follows a structured workflow that integrates device connectivity,
-              network behavior, and application-level interaction.
-            </p>
-          </header>
-
-          <div class="method-steps">
-            <div class="mstep">
-              <div class="mnum">1</div>
-              <div>
-                <div class="mtitle">Device connection</div>
-                <div class="mtext">
-                  Devices connect to the wireless environment and establish network sessions through the Amarisoft platform.
-                </div>
-              </div>
-            </div>
-
-            <div class="mstep">
-              <div class="mnum">2</div>
-              <div>
-                <div class="mtitle">Session establishment</div>
-                <div class="mtext">
-                  TCP sessions are created and managed using MPTCP, allowing multiple paths to be utilized simultaneously.
-                </div>
-              </div>
-            </div>
-
-            <div class="mstep">
-              <div class="mnum">3</div>
-              <div>
-                <div class="mtitle">Network interaction</div>
-                <div class="mtext">
-                  Data flows through the network while logs and system behavior are monitored through the Amarisoft interface.
-                </div>
-              </div>
-            </div>
-
-            <div class="mstep">
-              <div class="mnum">4</div>
-              <div>
-                <div class="mtitle">Application integration</div>
-                <div class="mtext">
-                  TAK services provide a shared operational view, allowing users to observe and interact with network-connected devices.
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="aside">
-          <div class="aside-card">
-            <div class="aside-top">
-              <span class="pill">Key idea</span>
-            </div>
-            <div class="aside-body">
-              <p class="aside-text">
-                The methodology focuses on combining multiple layers into a single working platform,
-                rather than evaluating each component in isolation. This enables realistic system-level behavior.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
       <div class="wrap">
         <header class="section-head">
-          <h2>Technology stack</h2>
+          <h2>Evaluation scenarios</h2>
           <p>
-            The PSBN Prototype integrates multiple technologies to support wireless communication,
-            transport-layer continuity, and operational applications.
+            These scenarios demonstrate how TCP-based applications behave across multiple network paths
+            in a public safety environment.
           </p>
         </header>
 
         <div class="cards">
           <article class="card">
-            <h3>Linux-based system</h3>
-            <p>
-              The platform is built on a Linux environment, enabling control over networking behavior
-              and integration of custom tools.
-            </p>
+            <h3>Link loss during active session</h3>
+            <p>One network path is removed while a session is active to evaluate continuity behavior.</p>
           </article>
 
           <article class="card">
-            <h3>Amarisoft</h3>
-            <p>
-              Provides the wireless network emulation, including signaling, attach procedures,
-              and real-time system logs.
-            </p>
+            <h3>Handover transition</h3>
+            <p>Devices transition between available networks while maintaining session usability.</p>
           </article>
 
           <article class="card">
-            <h3>MPTCP</h3>
-            <p>
-              Enables continuity at the transport layer by allowing TCP sessions to persist
-              across multiple network paths.
-            </p>
-          </article>
-
-          <article class="card">
-            <h3>TAK / WebTAK</h3>
-            <p>
-              Delivers application-layer functionality including mapping, device tracking,
-              and communication between connected users.
-            </p>
+            <h3>Degraded path conditions</h3>
+            <p>Bandwidth and latency are modified to observe how traffic adapts across paths.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="cta">
-      <div class="wrap cta-inner">
-        <div>
-          <h2>Next: system architecture.</h2>
-          <p>See how all components connect together.</p>
-        </div>
-        <div class="cta-actions">
-          <a class="btn primary" href="architecture.html">Architecture</a>
-          <a class="btn" href="impact.html">Results</a>
-        </div>
-      </div>
-    </section>
   </main>
 
   <footer class="footer">
