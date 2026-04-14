@@ -645,3 +645,20 @@ code{
   .impact-images{grid-template-columns:1fr}
   .impact-result{position:static}
 }
+
+.person-contact{
+  margin-top:8px;
+  text-align:center;
+  font-size:14px;
+  line-height:1.5;
+}
+
+.person-contact a{
+  color:var(--muted);
+  text-decoration:none;
+}
+
+.person-contact a:hover{
+  color:var(--accent);
+  text-decoration:underline;
+}
